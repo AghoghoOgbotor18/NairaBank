@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #01051e;
+  --color-primary-light: #01041a;
+  --color-primary-dark: #010417;
+  --color-secondary: #c7501d;
+  --color-gray: #333;
+  --color-white: #fff;
+  --color-blob: #510275;
+  --color-ash:#686868;
+  --color-offwhite: #cfcccc;
+  
+}
+
+@layer base{
+  *, ::before, ::after{
+    @apply box-border;
+  }
+  a{
+    @apply text-white cursor-pointer;
+  }
+  h3{
+    @apply text-3xl font-bold md:text-4xl;
+  }
+  section{
+    @apply w-[98vw] my-7 p-5  box-border md:mt-[5rem] overflow-x-hidden m-0;
+  }
+  h4{
+    @apply text-secondary font-bold;
+  }
+  h5{
+    @apply font-bold text-lg mb-2;
+  }
+}
+
+
+@layer components{
+  .btn{
+    @apply bg-secondary p-2 px-3 w-[10rem] rounded-sm cursor-pointer;
+  }
+  .heading{
+    @apply text-center m-7 mt-[100px] flex flex-col gap-1 mb-12;
+  }
+  .card{
+    @apply border-2 border-gray rounded-sm flex flex-col justify-center align-middle gap-3 text-center py-10 px-3 hover:bg-primary-dark hover:duration-100 hover:-translate-y-2 hover:transition-all;
+  }
+}
+
+@layer utilities {
+  .fade-in {
+    @apply opacity-0 translate-y-5 transition duration-1000 ease-in-out;
+  }
+  .fade-in.show {
+    @apply opacity-100 translate-y-0;
+  }
+
+  /* Stagger delays */
+  .delay-1 {
+    transition-delay: 0.3s;
+  }
+  .delay-2 {
+    transition-delay: 0.6s;
+  }
+  .delay-3 {
+    transition-delay: 0.9s;
+  }
+  .delay-4 {
+    transition-delay: 1.2s;
+  }
+  .delay-5{
+    transition-delay:1.5s;
+  }
+  .delay-6{
+    transition-delay: 1.8s;
+  }
+}

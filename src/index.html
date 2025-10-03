@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Website</title>
+    <link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./output.css">
+</head>
+<body class="m-0 p-0 overflow-x-hidden bg-primary-light text-white w-full box-border">
+    
+    <div class="w-full ">
+
+        <!-- Navigation Bar -->
+        <header>
+        <nav class="w-full fixed top-0 left-0 z-50">
+            <div
+            class="bg-primary-dark flex justify-between items-center h-[3.8rem] px-4 
+                    md:flex-col md:justify-center md:h-auto md:py-4 lg:flex-row lg:h-[3.8rem]"
+            >
+            <!-- Logo -->
+            <div class="logo text-3xl md:mb-3 lg:mb-0">
+                <h2 class="text-white text-center lg:text-left">
+                Naira<span class="text-secondary">Savings.</span>
+                </h2>
+            </div>
+
+            <!-- Menu Icon (only mobile) -->
+            <div class="flex items-center md:hidden">
+                <i
+                id="menu-open"
+                class="fa-solid fa-bars text-white text-3xl cursor-pointer"
+                ></i>
+            </div>
+
+            <!-- Nav Items -->
+            <ul
+                id="navMenu"
+                class="fixed top-0 left-0 h-full w-full bg-primary-dark flex flex-col justify-center items-center space-y-10 text-white text-xl 
+                -translate-x-full transition-transform duration-300
+                md:translate-x-0 md:static md:flex md:flex-row md:flex-wrap md:justify-center md:items-center md:gap-8 md:space-y-0 md:bg-transparent md:text-base
+                lg:justify-end lg:-mt-4">
+                <!-- Close Icon (mobile only) -->
+                <li class="absolute top-5 right-5 md:hidden">
+                <i
+                    id="menu-close"
+                    class="fa-solid fa-xmark text-white text-3xl cursor-pointer"
+                ></i>
+                </li>
+
+                <li><a class="nav-link text-secondary hover:text-secondary" href="#home">Home</a></li>
+                <li><a class="nav-link hover:text-secondary" href="#features">Features</a></li>
+                <li><a class="nav-link hover:text-secondary" href="#testimonials">Testimonials</a></li>
+                <li><a class="nav-link hover:text-secondary" href="#pricing">Pricing</a></li>
+                <li><a class="nav-link hover:text-secondary" href="#blog">Blog</a></li>
+                <li><a class="nav-link hover:text-secondary" href="#contact">Contact</a></li>
+                <li>
+                <button class="bg-secondary px-6 py-2 rounded-md cursor-pointer">
+                    Free Trial
+                </button>
+                </li>
+            </ul>
+            </div>
+        </nav>
+        </header>
+
+
+        <!--the main sections-->
+        <main>
+
+            <!-- Hero Section -->
+            <section id="home" class="fade-in h-screen w-screen overflow-hidden py-[25rem] flex flex-col-reverse justify-center items-center text-center md:flex-row md:justify-between -mt-5 md:text-left md:ml-[0%] relative before:absolute before:content-[''] before:w-[200px] before:h-[200px] before:rounded-full before:bg-blob before:top-[2rem] before:left-0 before:-z-10 before:blur-2xl after:absolute after:content-[''] after:w-[200px] after:h-[200px] after:rounded-full after:bg-secondary after:bottom-0 after:right-0  after:-z-10 after:blur-3xl">
+                <div class="flex flex-col align-middle md:pl-[3rem] justify-center gap-4  md:w-[50%]">
+                    <h3>Your Money, <span class="text-secondary">Your Control</span></h3>
+                    <p class="md:w-[80%]">Open an account in minutes, manage your money anywhere, and get full control over your finances. Save, spend, and grow with tools that help you achieve your financial goals faster.</p>
+                    <button class="btn my-5 mx-auto md:m-0">Download App</button>
+                </div>
+                <img class="w-[300px] md:w-[500px] m-7" src="./asset/img/hero4.png" alt="money image">
+                
+            </section>
+
+            <!-- Features Section -->
+            <section id="features" class="fade-in">
+                <div class="heading">
+                    <h4>Our Future</h4>
+                    <h3>Easy To Manage Your Transactions By Our App</h3>
+                </div>
+                <div class="cards flex flex-col my-2  gap-10 md:flex-row md:justify-between md:align-middle md:gap-8 md:my-16 mx-auto md:pl-6">
+                    <div class="card fade-in delay-1">
+                        <i class="fa-regular fa-calendar-days bg-secondary p-3 rounded-sm w-12 my-2 mx-auto"></i>
+                        <h6>Expense Tracking</h6>
+                        <p class="text-sm">Easily track expenses, reduce wasteful spending, and grow your savings.</p>
+                    </div>
+                    <div class="card fade-in delay-2">
+                        <i class="fa-solid fa-chart-pie bg-secondary p-3 rounded-sm w-12 my-2 mx-auto"></i>
+                        <h6>Finance Snapshot</h6>
+                        <p class="text-sm">Get a clear overview of your income, expenses, and savings at a glance.</p>
+                    </div>
+                    <div class="card fade-in delay-3">
+                        <i class="fa-solid fa-headset bg-secondary p-3 rounded-sm w-12 my-2 mx-auto"></i>
+                        <h6>24/7 Support</h6>
+                        <p>We are always here to help whenever you need assistance in any way.</p>
+                    </div>
+                </div>
+
+            </section>
+
+
+            <!--read more -->
+            <section class="md:w-screen fade-in">
+                <div class="flex flex-col lg:flex-row-reverse lg:m-0 lg:w-full lg:gap-16 md:items-center md:text-center lg:justify-between max-lg:[70%] relative before:absolute before:content-[''] before:w-[200px] before:h-[200px] before:rounded-full before:bg-blob before:top-[2rem] before:left-0 before:-z-10 before:blur-2xl after:absolute after:content-[''] after:w-[200px] after:h-[200px] after:rounded-full after:bg-secondary after:bottom-0 after:right-0  after:-z-10 after:blur-3xl">
+                    <div class="text-center lg:text-left items-center lg:fade-in lg:delay-1">
+                        <div class="heading md:ml-0 md:mt-0">
+                            <h4 class="lg:text-left lg:ml-0">Saving Money</h4>
+                            <h3 class="md:text-left">Best Financing Apps to Save Your Money</h3>
+                        </div>
+                        <p class="-mt-7 md:w-[90vh] mx-auto self-center">Take control of your finances with the best app designed to help you save money effortlessly. Track expenses, set goals, and watch your savings grow with smart insights.</p>
+                        <button class="btn my-5 mx-auto">Read More</button>
+                    </div>
+                    <img class="w-[450px] -mt-8 md:w-[500px] fade-in delay-2 md:delay-0 self-center  m-7" src="./asset/img/hero3.png" alt="money image">
+                </div>
+            </section>
+
+
+            <!-- how to install -->
+            <section class="fade-in">
+                <div class="heading">
+                    <h4>How It Works</h4>
+                    <h3>Grow Your Money Savings</h3>
+                </div>
+                <div class="flex flex-col gap-14 md:flex-row md:gap-15 md:w-[90vw] md:mx-auto">
+                    <div class="flex flex-col justify-center items-center text-center gap-3 fade-in delay-1">
+                        <h2 class="text-5xl">1</h2>
+                        <h6>Install the App</h6>
+                        <p>Click the button bellow to install the App</p>
+                    </div>
+                    <hr class="w-16 md:w-20 border-2 border-secondary rotate-90 my-2 mx-auto md:rotate-0 md:mt-10">
+                    <div class="flex flex-col justify-center items-center text-center gap-3 fade-in delay-2">
+                        <h2 class="text-5xl bg-secondary w-14 py-2 rounded-sm self-center">2</h2>
+                        <h6>Setup Your Profile</h6>
+                        <p>After installing the App, register your username and email address to set up your profile</p>
+                    </div>
+                    <hr class="w-16 md:w-20 border-2 border-secondary rotate-90 my-2 mx-auto md:rotate-0 md:mt-10">
+                    <div class="flex flex-col justify-center items-center text-center gap-3 fade-in delay-3">
+                        <h2 class="text-5xl">3</h2>
+                        <h6>Enjoy the feature</h6>
+                        <p>Our application is user-friendly as it is easy for visitors to navigate.</p>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <button class="btn mt-20 fade-in delay-4">Download App</button>
+                </div>
+            </section>
+
+
+            <!-- Testimonial Section -->
+            <section id="testimonials" class="fade-in">
+                <div class="heading">
+                    <h4>User Review</h4>
+                    <h3>What Clients Say About Our App</h3>
+                </div>
+
+                <!-- User Images -->
+                <div id="testimonial-images" class="flex flex-wrap gap-6 items-center text-center justify-center cursor-pointer">
+                    <img src="./asset/img/user1.jpg" alt="user" class="w-15 h-15 rounded-full border-2 border-secondary">
+                    <img src="./asset/img/user2.jpg" alt="user" class="w-15 h-15 rounded-full fade-in delay-1">
+                    <img src="./asset/img/user3.jpg" alt="user" class="w-15 h-15 rounded-full fade-in delay-2">
+                    <img src="./asset/img/user4.jpg" alt="user" class="w-15 h-15 rounded-full fade-in delay-3">
+                    <img src="./asset/img/user5.jpg" alt="user" class="w-15 h-15 rounded-full fade-in delay-4">
+                </div>
+
+                <!-- Testimonial Texts -->
+                <div id="testimonial-texts" class="flex flex-col gap-4 my-8 text-center w-[80%] mx-auto">
+                    <div class="flex flex-col gap-1 justify-center items-center">
+                        <p><em>This app has made me learn how to save without stress</em></p>
+                        <h6 class="text-secondary">Sehara Taylor</h6>
+                        <p class="text-sm">Calabar, Nigeria</p>
+                    </div>
+                    <div class="flex-col gap-1 justify-center items-center hidden">
+                        <p><em>The app is user-friendly and easy to navigate.</em></p>
+                        <h6 class="text-secondary">Mary Slessor</h6>
+                        <p>Kano, Nigeria</p>
+                    </div>
+                    <div class="flex-col gap-1 justify-center items-center hidden">
+                        <p><em>I and my family has been using this app for two years. It is trust-worthy</em></p>
+                        <h6 class="text-secondary">Micheal Jason</h6>
+                        <p>Port Harcourt, Nigeria</p>
+                    </div>
+                    <div class="flex-col gap-1 justify-center items-center hidden">
+                        <p><em>Using this app has been one of the best decisions of my life. It is swift</em></p>
+                        <h6 class="text-secondary">Sylvia Charles</h6>
+                        <p>Warri, Nigeria</p>
+                    </div>
+                    <div class="flex-col gap-1 justify-center items-center hidden">
+                        <p><em>I'd recommend this app to anyone. It is fast, easy and reliable.</em></p>
+                        <h6 class="text-secondary">Terry Samson</h6>
+                        <p>Abuja, Nigeria</p>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- Pricing Section -->
+            <section id="pricing" class="fade-in">
+                <div class="heading">
+                    <h4>Pricing</h4>
+                    <h3>Get Reasonable Price</h3>
+                </div>
+                <div class="text-center -mt-7 mb-10 md:w-[80%] md:mx-auto">
+                    <p>
+                        Simple, transparent, and designed to fit your needs. 
+                        Choose the plan that works for you and enjoy smarter ways to manage, save,
+                         and grow your money without hidden fees or extra charges.
+                    </p>
+                </div>
+                       <!-- Toggle -->
+                <div class="flex items-center justify-center mb-10 gap-3">
+                    <span class="font-medium">Monthly</span>
+                    <label class="relative inline-flex items-center cursor-pointer">
+                    <input type="checkbox" id="togglePlan" class="sr-only peer">
+                    <div class="w-14 h-7 bg-primary-dark rounded-full peer peer-checked:bg-secondary transition border-1 border-gray"></div>
+                    <div class="absolute left-1 top-1 w-5 h-5 bg-gray-800 rounded-full peer-checked:translate-x-7 transition"></div>
+                    </label>
+                    <span class="font-medium">Yearly</span>
+                </div>
+
+                <!-- Billing Plans -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 w-[90%] md:my-1 mx-auto">
+
+                    <!-- Card 1 -->
+                    <div class="border-2 border-gray rounded-sm flex flex-col justify-center items-center gap-3 text-center py-10 px-3 fade-in delay-1 hover:bg-primary-dark hover:duration-100 hover:-translate-y-2 hover:transition-all shadow">
+                        <i class="fa-solid fa-coins text-white p-4 rounded-full bg-secondary"></i>
+                        <h3 class="text-xl font-semibold">Basic Plan</h3>
+                        <p class="text-gray-600">Perfect for beginners just starting out.</p>
+                        <p class="text-2xl font-bold plan-price" data-monthly="₦7,500/mo" data-yearly="₦75,000/yr">₦7,500/mo</p>
+                        <ul class="text-gray-700 text-sm space-y-2 text-left">
+                            <li><i class="fa-solid fa-check mr-2 text-secondary"></i>5 Projects</li>
+                            <li><i class="fa-solid fa-check mr-2 text-secondary"></i>Email Support</li>
+                            <li><i class="fa-solid fa-check mr-2 text-secondary"></i>Basic Analytics</li>
+                        </ul>
+                        <button class="text-white cursor-pointer px-5 py-2 rounded-md mt-3 bg-secondary">Get Started</button>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="border-2 border-gray rounded-sm flex flex-col justify-center items-center gap-3 fade-in delay-2 text-center py-10 px-3 hover:bg-primary-dark hover:duration-100 hover:-translate-y-2 hover:transition-all shadow">
+                    <i class="fa-solid fa-gem text-white p-4 rounded-full bg-secondary"></i>
+                    <h3 class="text-xl font-semibold">Pro Plan</h3>
+                    <p class="text-gray-600">Balance of savings and features</p>
+                    <p class="text-2xl font-bold plan-price" data-monthly="₦15,000/mo" data-yearly="₦150,000/yr">₦15,000/mo</p>
+                    <ul class="text-gray-700 text-sm space-y-2 text-left">
+                        <li><i class="fa-solid fa-check mr-2 text-secondary"></i>20 Projects</li>
+                        <li><i class="fa-solid fa-check mr-2 text-secondary"></i>Priority Support</li>
+                        <li><i class="fa-solid fa-check mr-2 text-secondary"></i>Advanced Analytics</li>
+                        <li><i class="fa-solid fa-check mr-2 text-secondary"></i>Team Collaboration</li>
+                    </ul>
+                    <button class="text-white cursor-pointer px-5 py-2 rounded-md mt-3 bg-secondary">Get Started</button>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="border-2 border-gray rounded-sm flex flex-col justify-center items-center gap-3 fade-in delay-3 text-center py-10 px-3 hover:bg-primary-dark hover:duration-100 hover:-translate-y-2 hover:transition-all shadow">
+                    <i class="fa-solid fa-crown text-white p-4 rounded-full bg-secondary"></i>
+                    <h3 class="text-xl font-semibold">Premium Plan</h3>
+                    <p class="text-gray-600">Full control and insights</p>
+                    <p class="text-2xl font-bold plan-price" data-monthly="₦25,000/mo" data-yearly="₦250,000/yr">₦25,000/mo</p>
+                    <ul class="text-gray-700 text-sm space-y-2 text-left">
+                        <li><i class="fa-solid fa-check mr-2 text-secondary"></i>Unlimited Projects</li>
+                        <li><i class="fa-solid fa-check mr-2 text-secondary"></i>Dedicated Support</li>
+                        <li><i class="fa-solid fa-check mr-2 text-secondary"></i>Business Analytics</li>
+                        <li><i class="fa-solid fa-check mr-2 text-secondary"></i>Custom Integrations</li>
+                        <li><i class="fa-solid fa-check mr-2 text-secondary"></i>Free Updates</li>
+                    </ul>
+                    <button class="text-white cursor-pointer px-5 py-2 rounded-md mt-3 bg-secondary">Get Started</button>
+                    </div>
+
+                </div> 
+            </section>
+
+
+            <!-- Blog Section -->
+            <section id="blog" class="fade-in">
+                <div>
+                    <div class="heading">
+                        <h4>Innovation and Quality Improvement</h4>
+                        <h3>Latest Updates, Solutions And Company News</h3>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-7 w-[98%] my-1 mx-auto">
+                        <div class="flex flex-col gap-4 border-2 border-gray-800 py-3 px-5 shadow-primary-light rounded-sm fade-in delay-1">
+                            <img src="./asset/img/blog1.jpg" class="rounded-sm" alt="blog">
+                            <div class="text-sm flex gap-4 text-gray-300 -mt-2">
+                                <p>20th June 2025</p>
+                                <p>2minutes read</p>
+                            </div>
+                            <a href="#" class="text-white underline text-2xl">Should Small business be entitled to system?</a>
+                            <p>
+                                Every small business deserves a system that makes work easier. 
+                                From tracking expenses to managing customers, having the right tools helps save time, cut costs, and boost growth....
+                            </p>
+                            <a href="#" class="text-secondary underline">Read More</a>
+                        </div>
+
+                        <div class="flex flex-col gap-4 border-2 border-gray-800 py-3 px-5 shadow-primary-light rounded-sm fade-in delay-2">
+                            <img src="./asset/img/blog2.jpg" class="rounded-sm" alt="blog">
+                            <div class="text-sm flex gap-2 text-gray-300 -mt-2">
+                                <p>12th August 2025</p>
+                                <p>3minutes read</p>
+                            </div>
+                            <a href="#" class="text-white underline text-2xl">How to Organize your budget for Maximum Productivity?</a>
+                            <p>
+                                A clear budget boosts productivity — track your income, set savings goals, and plan expenses so every naira is used wisely....
+                            </p>
+                            <a href="#" class="text-secondary underline">Read More</a>
+                        </div>
+
+                        <div class="flex flex-col gap-4 border-2 border-gray-800 py-3 px-5 shadow-primary-light rounded-sm fade-in delay-3">
+                            <img src="./asset/img/blog3.jpg" class="rounded-sm" alt="blog">
+                            <div class="text-sm flex gap-2 text-gray-300 -mt-2">
+                                <p>29th Sept 2025</p>
+                                <p>3minutes read</p>
+                            </div>
+                            <a href="#" class="text-white underline text-2xl">Four ways to cheer yourself up on a Blue Monday!</a>
+                            <p>
+                                Blue Monday doesn't have to get you down. Brighten your day with a little self-care, a good laugh, or a quick chat with someone you love....
+                            </p>
+                            <a href="#" class="text-secondary underline">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- Download Section -->
+            <section class="fade-in">
+                <div class="flex flex-col justify-center items-center">
+                    <div class="heading">
+                        <h3>Download App Now And Save Your Money</h3>
+                        <p>Download our App from either App store or Playstore. click your preference below</p>
+                    </div>
+                    <div class="flex flex-col md:flex-row gap-3 cursor-pointer">
+                        <img src="./asset/img/ios-store-dark.png" class="bg-white rounded-sm fade-in delay-1 px-3 py-2" alt="IOS badge">
+                        <img src="./asset/img/g-play-dark.png" class="bg-white fade-in delay-2 rounded-sm px-3 py-2" alt="playstore badge">
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- Contact Section -->
+            <section id="contact" class="fade-in">
+                <div class="heading">
+                    <h4>Have A Question?</h4>
+                    <h3>Get In Touch</h3>
+                </div>
+                <form class="grid grid-cols-1 gap-4 md:grid-cols-2 md:w-[60vw] md:my-1 md:mx-auto">
+                    <label for="firstName" >
+                        <input class="py-2 outline-0 focus:border-2 fade-in delay-1 focus:border-secondary px-1 rounded-sm w-full bg-offwhite text-gray" type="text" name="FirstName" placeholder="firstName" required>
+                    </label>
+                    <label for="lastName">
+                        <input type="text" name="LastName" class="outline-0 fade-in delay-2 focus:border-2 focus:border-secondary py-2 px-1 w-full rounded-sm bg-offwhite text-gray"  placeholder="lastName" required>
+                    </label>
+                    <label for="email">
+                        <input type="email" name="email" class="outline-0 fade-in delay-3 focus:border-3 focus:border-secondary py-2 px-1 w-full rounded-sm bg-offwhite text-gray"  placeholder="Email" required>
+                    </label>
+                    <label for="phone">
+                        <input type="number" name="phone" class="outline-0 fade-in delay-4 focus:border-4 focus:border-secondary py-2 px-1 w-full rounded-sm bg-offwhite text-gray"  placeholder="phone number" required>
+                    </label>
+                    <label for="message" class="md:col-span-2">
+                        <textarea placeholder="your message..." rows="4" class="outline-0 fade-in delay-5 focus:border-2 focus:border-secondary py-2 px-1 w-full rounded-sm bg-offwhite text-gray" ></textarea>
+                    </label>
+                    
+                </form>
+                <div class="flex justify-center items-center mt-4">
+                    <button class="btn fade-in delay-6">Send message</button>
+                </div>
+            </section>
+
+
+            <!-- Newletter Section -->
+            <section class="bg-primary-dark fade-in delay-2 w-screen mb-0">
+                <div class="flex flex-col gap-3 md:flex-row md:justify-around md:gap-0 pt-5">
+                    <div class="md:basis-[35%] fade-in delay-1">
+                        <h5>About Us</h5>
+                        <p>
+                            Our website started with a simple vision — to make money management effortless.What began as a small idea grew into a trusted tool for tracking expenses and saving smart.
+                            We're here to help you organize your budget, set goals, and reach them with ease.
+                            With us, staying in control of your finances is simpler than ever.
+                        </p>
+                        <div class="flex gap-6 items-center">
+                            <p>Follow Us:</p>
+                            <div class="flex gap-4">
+                                <a href="#" class="text-white text-sm"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="text-white text-sm"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="text-white text-sm"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="text-white text-sm"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-14 pt-7 md:pt-0">
+                        <div class="fade-in delay-2">
+                            <h5>Quick Links</h5>
+                            <div class="flex flex-col underline text-sm">
+                                <a href="#home">Home</a>
+                                <a href="#features">Features</a>
+                                <a href="#testimonials">Testimonial</a>
+                                <a href="#pricing">Pricing</a>
+                                <a href="#blog">Blog</a>
+                                <a href="#contact">Contact</a>
+                            </div>
+                        </div>
+                        <div class="fade-in delay-3">
+                            <h5>Help</h5>
+                            <div class="flex flex-col underline text-sm">
+                                <a href="#">About Us</a>
+                                <a href="#">Partners</a>
+                                <a href="#">Career</a>
+                                <a href="#">Reviews</a>
+                                <a href="#">Terms & Conditions</a>
+                                <a href="#">Help</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="fade-in delay-4">
+                        <h5 class="pt-7 md:pt-0">Newsletter</h5>
+                        <p class="mb-2">Subscribe with your email to recieve updates from us</p>
+                        <form>
+                            <input type="email" class="w-[60%] py-2 outline-0 focus:border-2 focus:border-secondary px-1 rounded-sm bg-offwhite text-gray" placeholder="Enter Your Email">
+                            <button class="btn w-[10%] rounded-bl-none rounded-tl-none  -ml-3"><i class="fa-solid fa-chevron-right"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer class="text-center pt-7 pb-2 w-screen bg-primary-dark -mt-4">
+                <p>2025 &copy; Sylvia. All Rights Reserved</p>
+            </footer>
+            
+
+        </main>
+
+
+    </div>
+
+
+    <script src="./index.js"></script>
+</body>
+</html>
